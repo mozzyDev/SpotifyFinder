@@ -15,7 +15,7 @@ namespace SpotifyFinder.Data
         private string BaseAddress = "https://api.spotify.com/v1/";
         public async Task MakeString()
         {
-            var getData = JsonConvert.DeserializeObject(await TestGet());
+            var getData = JsonConvert.DeserializeObject<List<SpotifyData>>(await TestGet());
         }
         //metoda asynchroniczna - aplikacja wielowątkowa
         //przerzucamy na inny wątek procesora
