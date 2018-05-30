@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpotifyFinder.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace SpotifyFinder
         public MainWindow()
         {
             InitializeComponent();
+            HttpGrabber http = new HttpGrabber();
+            http.MakeString();
             
         }
     }

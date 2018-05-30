@@ -5,13 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace SpotifyFinder.Data
 {
     class HttpGrabber
     {
-        private const string BaseAddress = "https://api.spotify.com/v1/";
 
+        private string BaseAddress = "https://api.spotify.com/v1/";
+        public async Task MakeString()
+        {
+            var getData = JsonConvert.DeserializeObject(await TestGet());
+        }
         //metoda asynchroniczna - aplikacja wielowątkowa
         //przerzucamy na inny wątek procesora
         public async Task<string> TestGet()
