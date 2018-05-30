@@ -23,7 +23,7 @@ namespace SpotifyFinder
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine("Hello world");
+            
         }
     }
 }
